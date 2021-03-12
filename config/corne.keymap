@@ -18,8 +18,8 @@
 #define RAISE_MAC 3
 #define LOWER_WIN 4
 #define LOWER_MAC 5
-#define UML 5
-#define FUNC 6
+#define UML 6
+#define FUNC 7
 
 
 
@@ -106,7 +106,7 @@
    &none  &trans       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans        &kp BSLH   &kp LBKT &kp RBKT &kp UNDER &kp EXCL  &none
                                     &trans       &trans       &trans        &trans     &sl UML  &trans
                         >;
-                };
+                };      
                 uml_layer {
 // -----------------------------------------------------------------------------------------
 // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  ü   |  I  |  ö  |  P  |
