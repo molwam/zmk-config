@@ -20,7 +20,8 @@
 #define LOWER_WIN 4
 #define LOWER_MAC 5
 #define UML 6
-#define FUNC 7
+#define FUNC_WIN 7
+#define FUNC_MAC 8
 
 
 &mt {
@@ -75,10 +76,10 @@
 // | € | $ |  °  |  ^  |     |   |  0  |  1  |  2  |  3  |  =  |
 //         | CTRL| FUNC| SHFT|   | GUI |     | ALT |
                         bindings = <
-   &none  &kp SQT    &kp DQT   &kp GRAVE &kp GRAVE &trans     &kp PLUS   &kp N7   &kp N8 &kp N9 &kp ASTRK &none
-   &none  &kp AT     &kp PRCNT &kp AMPS  &kp HASH  &trans     &kp MINUS  &kp N4   &kp N5 &kp N6 &kp SLASH &none
-   &none  &kp RA(N5) &kp DLLR  &kp CARET &kp CARET &trans     &kp N0     &kp N1   &kp N2 &kp N3 &kp EQUAL &none
-                               &trans    &mo FUNC  &trans     &trans     &trans   &trans
+   &none  &kp SQT    &kp DQT   &kp GRAVE &kp GRAVE     &trans     &kp PLUS   &kp N7   &kp N8 &kp N9 &kp ASTRK &none
+   &none  &kp AT     &kp PRCNT &kp AMPS  &kp HASH      &trans     &kp MINUS  &kp N4   &kp N5 &kp N6 &kp SLASH &none
+   &none  &kp RA(N5) &kp DLLR  &kp CARET &kp CARET     &trans     &kp N0     &kp N1   &kp N2 &kp N3 &kp EQUAL &none
+                               &trans    &mo FUNC_WIN  &trans     &trans     &trans   &trans
                         >;
                 };
                 raise_mac_layer {
@@ -88,35 +89,35 @@
 // | € | $ |  °  |  ^  |     |   |  0  |  1  |  2  |  3  |  =  |
 //         | CTRL| FUNC| SHFT|   | GUI |     | ALT |
                         bindings = <
-   &none  &kp SQT    &kp DQT   &kp GRAVE &kp GRAVE &trans     &kp PLUS   &kp N7   &kp N8 &kp N9 &kp ASTRK &none
-   &none  &kp AT     &kp PRCNT &kp AMPS  &kp HASH  &trans     &kp MINUS  &kp N4   &kp N5 &kp N6 &kp SLASH &none
+   &none  &kp SQT    &kp DQT   &kp GRAVE &kp GRAVE     &trans     &kp PLUS   &kp N7   &kp N8 &kp N9 &kp ASTRK &none
+   &none  &kp AT     &kp PRCNT &kp AMPS  &kp HASH      &trans     &kp MINUS  &kp N4   &kp N5 &kp N6 &kp SLASH &none
    &none  &kp LS(LA(N2)) &kp DLLR  &kp CARET &kp CARET &trans     &kp N0     &kp N1   &kp N2 &kp N3 &kp EQUAL &none
-                               &trans    &mo FUNC  &trans     &trans     &trans   &trans
+                               &trans    &mo FUNC_MAC  &trans     &trans     &trans   &trans
                         >;
                 };
                 lower_win_layer {
 // -----------------------------------------------------------------------------------------
 // | volU| pos1|  up | end | pgup|   |  |  |  {  |  }  |  ~  |  *  |
 // | volD| left| down| rght|pgdwn|   |  /  |  (  |  )  |  -  |  =  |
-// |BTCLR| BT1 | BT2 | USB | MAC |   |  \  |  [  |  ]  |  _  |  !  |
+// |sPos1|sBWrd|sBChr|sFChr|sFWrd|   |  \  |  [  |  ]  |  _  |  !  |
 //             | CTRL|     | SHFT|   | GUI | UML | ALT |
                         bindings = <
-   &none  &kp C_VOL_UP &kp HOME     &kp UP       &kp END      &kp PG_UP              &kp PIPE   &kp LBRC &kp RBRC &kp TILDE &kp ASTRK &none
-   &none  &kp C_VOL_DN &kp LEFT     &kp DOWN     &kp RIGHT    &kp PG_UP              &kp SLASH  &kp LPAR &kp RPAR &kp MINUS &kp EQUAL &none
-   &none  &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &out OUT_TOG &to DEFAULT_MAC        &kp BSLH   &kp LBKT &kp RBKT &kp UNDER &kp EXCL  &none
-                                    &trans       &trans       &trans                 &trans     &sl UML  &trans
+   &none  &kp C_VOL_UP &kp HOME         &kp UP       &kp END       &kp PG_UP              &kp PIPE   &kp LBRC &kp RBRC &kp TILDE &kp ASTRK &none
+   &none  &kp C_VOL_DN &kp LEFT         &kp DOWN     &kp RIGHT     &kp PG_UP              &kp SLASH  &kp LPAR &kp RPAR &kp MINUS &kp EQUAL &none
+   &none  &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LEFT) &kp LS(RIGHT) &kp LS(LC(RIGHT))      &kp BSLH   &kp LBKT &kp RBKT &kp UNDER &kp EXCL  &none
+                                        &trans       &trans        &trans                 &trans     &sl UML  &trans
                         >;
                 };
                 lower_mac_layer {
 // -----------------------------------------------------------------------------------------
 // | volU| pos1|  up | end | pgup|   |  |  |  {  |  }  |  ~  |  *  |
 // | volD| left| down| rght|pgdwn|   |  /  |  (  |  )  |  -  |  =  |
-// |BTCLR| BT1 | BT2 | USB | WIN |   |  \  |  [  |  ]  |  _  |  !  |
+// |     |     |     |     |     |   |  \  |  [  |  ]  |  _  |  !  |
 //             | CTRL|     | SHFT|   | GUI | UML | ALT |
                         bindings = <
-   &none  &kp C_VOL_UP &kp LG(LEFT) &kp UP       &kp LG(RIGHT) &kp LG(UP)             &kp PIPE   &kp LBRC &kp RBRC &kp TILDE &kp ASTRK &none
-   &none  &kp C_VOL_DN &kp LEFT     &kp DOWN     &kp RIGHT     &kp LG(DOWN)           &kp SLASH  &kp LPAR &kp RPAR &kp MINUS &kp EQUAL &none
-   &none  &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &out OUT_TOG  &to DEFAULT_WIN        &kp BSLH   &kp LBKT &kp RBKT &kp UNDER &kp EXCL  &none
+   &none  &kp C_VOL_UP &kp LG(LEFT) &kp UP       &kp LG(RIGHT) &kp LG(UP)             &kp PIPE   &kp LBRC   &kp RBRC &kp TILDE &kp ASTRK &none
+   &none  &kp C_VOL_DN &kp LEFT     &kp DOWN     &kp RIGHT     &kp LG(DOWN)           &kp SLASH  &kp LPAR   &kp RPAR &kp MINUS &kp EQUAL &none
+   &none  &trans       &trans       &trans       &trans        &trans                 &kp BSLH   &kp LBKT   &kp RBKT &kp UNDER &kp EXCL  &none
                                     &trans       &trans        &trans                 &trans     &kp LA(U)  &trans
                         >;
                 };     
@@ -133,17 +134,30 @@
                               &trans &trans &trans     &trans  &trans    &trans
                         >;
                 };
-                func_layer {
+                func_win_layer {
 // -----------------------------------------------------------------------------------------
-// | f1 | f2 | f3 | f4 | f5 |   | f6 | f7 | f8 | f9 | f10|
-// | f11| f12|    |    |    |   |    |    |    |    |    |
-// |    |    |    |    |PWRN|   |PWRF|    |    |    |    |
-//           |GUI |LWR |SHFT|   |CTRL| RSE| ALT|
+// | f1  | f2  | f3  | f4  | f5  |   | f6 | f7 | f8 | f9 | f10|
+// | f11 | f12 |     |     | USB |   |    |    |    |    |    |
+// |BTCLR| BT1 | BT2 | BT3 | WIN |   |    |    |    |    |    |
+//             | PWRF| LWR | PWRF|   |PWRF| RSE|PWRF|
                         bindings = <
-   &none  &kp F1  &kp F2  &kp F3 &kp F4            &kp F5                &kp F6          &kp F7          &kp F8          &kp F9          &kp F10           &none
-   &none  &kp F11 &kp F12 &trans &ext_power EP_ON  &rgb_ug RGB_EFF       &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &ext_power EP_ON  &none
-   &none  &trans  &trans  &trans &ext_power EP_OFF &rgb_ug RGB_EFR       &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &ext_power EP_OFF &none
-                          &trans &trans            &rgb_ug RGB_TOG       &rgb_ug RGB_TOG &trans          &trans
+   &none  &kp F1       &kp F2       &kp F3            &kp F4        &kp F5                &kp F6            &kp F7 &kp F8            &kp F9 &kp F10 &none
+   &none  &kp F11      &kp F12      &trans            &trans        &out OUT_TOG          &trans            &trans &trans            &trans &trans  &none
+   &none  &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1      &bt BT_SEL 2  &to DEFAULT_MAC       &trans            &trans &trans            &trans &trans  &none
+                                    &ext_power EP_OFF &trans        &ext_power EP_OFF     &ext_power EP_OFF &trans &ext_power EP_OFF
+                        >;
+                };
+                func_mac_layer {
+// -----------------------------------------------------------------------------------------
+// | f1  | f2  | f3  | f4  | f5  |   | f6 | f7 | f8 | f9 | f10|
+// | f11 | f12 |     |     | USB |   |    |    |    |    |    |
+// |BTCLR| BT1 | BT2 | BT3 | WIN |   |    |    |    |    |    |
+//             | PWRF| LWR | PWRF|   |PWRF| RSE|PWRF|
+                        bindings = <
+   &none  &kp F1       &kp F2       &kp F3            &kp F4        &kp F5                &kp F6            &kp F7 &kp F8            &kp F9 &kp F10 &none
+   &none  &kp F11      &kp F12      &trans            &trans        &out OUT_TOG          &trans            &trans &trans            &trans &trans  &none
+   &none  &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1      &bt BT_SEL 2  &to DEFAULT_WIN       &trans            &trans &trans            &trans &trans  &none
+                                    &ext_power EP_OFF &trans        &ext_power EP_OFF     &ext_power EP_OFF &trans &ext_power EP_OFF
                         >;
                 };
         };
