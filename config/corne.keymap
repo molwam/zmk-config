@@ -115,10 +115,10 @@
 // |     |     |     |     |     |   |  \  |  [  |  ]  |  _  |  !  |
 //             | CTRL|     | SHFT|   | GUI | UML | ALT |
                         bindings = <
-   &none  &kp C_VOL_UP &kp LG(LEFT) &kp UP       &kp LG(RIGHT) &kp LG(UP)             &kp PIPE   &kp LBRC   &kp RBRC &kp TILDE &kp ASTRK &none
-   &none  &kp C_VOL_DN &kp LEFT     &kp DOWN     &kp RIGHT     &kp LG(DOWN)           &kp SLASH  &kp LPAR   &kp RPAR &kp MINUS &kp EQUAL &none
-   &none  &trans       &trans       &trans       &trans        &trans                 &kp BSLH   &kp LBKT   &kp RBKT &kp UNDER &kp EXCL  &none
-                                    &trans       &trans        &trans                 &trans     &kp LA(U)  &trans
+   &none  &kp C_VOL_UP     &kp LG(LEFT)     &kp UP       &kp LG(RIGHT) &kp LG(UP)             &kp PIPE   &kp LBRC   &kp RBRC &kp TILDE &kp ASTRK &none
+   &none  &kp C_VOL_DN     &kp LEFT         &kp DOWN     &kp RIGHT     &kp LG(DOWN)           &kp SLASH  &kp LPAR   &kp RPAR &kp MINUS &kp EQUAL &none
+   &none  &kp LS(LG(LEFT)) &kp LS(LA(LEFT)) &kp LS(LEFT) &kp LS(RIGHT) &kp LS(LA(RIGHT))      &kp BSLH   &kp LBKT   &kp RBKT &kp UNDER &kp EXCL  &none
+                                            &trans       &trans        &trans                 &trans     &kp LA(U)  &trans
                         >;
                 };     
                 uml_layer {
