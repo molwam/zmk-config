@@ -22,6 +22,7 @@
 #define UML 6
 #define FUNC_WIN 7
 #define FUNC_MAC 8
+#define GAMING 9
 
 
 &mt {
@@ -137,12 +138,12 @@
                 func_win_layer {
 // -----------------------------------------------------------------------------------------
 // | f1  | f2  | f3  | f4  | f5  |   | f6 | f7 | f8 | f9 | f10|
-// | f11 | f12 |     |     | USB |   |    |    |    |    |    |
+// | f11 | f12 |     | game| USB |   |    |    |    |    |    |
 // |BTCLR| BT1 | BT2 | BT3 | WIN |   |    |    |    |    |    |
 //             | PWRF| LWR | PWRF|   |PWRF| RSE|PWRF|
                         bindings = <
    &none  &kp F1       &kp F2       &kp F3            &kp F4        &kp F5                &kp F6            &kp F7 &kp F8            &kp F9 &kp F10 &none
-   &none  &kp F11      &kp F12      &trans            &trans        &out OUT_TOG          &trans            &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT &trans  &none
+   &none  &kp F11      &kp F12      &trans            &to GAMING    &out OUT_TOG          &trans            &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT &trans  &none
    &none  &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1      &bt BT_SEL 2  &to DEFAULT_MAC       &trans            &trans &trans            &trans &trans  &none
                                     &ext_power EP_OFF &trans        &ext_power EP_OFF     &ext_power EP_OFF &trans &ext_power EP_OFF
                         >;
@@ -158,6 +159,19 @@
    &none  &kp F11      &kp F12      &trans            &trans        &out OUT_TOG          &trans            &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT &trans  &none
    &none  &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1      &bt BT_SEL 2  &to DEFAULT_WIN       &trans            &trans &trans            &trans &trans  &none
                                     &ext_power EP_OFF &trans        &ext_power EP_OFF     &ext_power EP_OFF &trans &ext_power EP_OFF
+                        >;
+                };
+                gaming_layer {
+// -----------------------------------------------------------------------------------------
+// | TAB   | q | w | e | r  |   | f6 | f7 | f8 | f9 | f10|
+// | LCTRL | a | s | d | f  |   |    |    |    |    |    |
+// | LSHFT | z | x | c | v  |   |    |    |    |    |    |
+//    | ALT | LCTRL | SPACE |   |PWRF| RSE|PWRF|
+                        bindings = <
+   &none &kp TAB   &kp Q  &kp W        &kp E     &kp R       &kp Y               &kp U     &kp I          &kp O        &kp P          &none
+   &none &kp LCTRL &kp A  &kp S        &kp D     &kp F       &kp H               &kp J     &kp K          &kp L        &hm RSHFT SEMI &none
+   &none &kp LSHFT &kp Z  &kp X        &kp C     &kp V       &kp M     &hm RALT COMMA &hm RGUI DOT &hm RCTRL FSLH &none
+                          &kp LEFT_ALT &kp LCTRL &kp SPACE   &mt LCTRL BSPC &lt RAISE_WIN ENTER &mt LALT DEL
                         >;
                 };
         };
