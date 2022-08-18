@@ -61,14 +61,14 @@
                 gaming_layer {
 // -----------------------------------------------------------------------------------------
 // | TAB   | q | w | e | r  |   | f6 | f7 | f8 | f9 | f10|
-// | LCTRL | a | s | d | f  |   |    |    |    |    |    |
-// | LSHFT | z | x | c | v  |   |    |    |    |    |    |
+// | LSHFT | a | s | d | f  |   |    |    |    |    |    |
+// | LCTRL | z | x | c | esc|   |    |    |    |    |    |
 //    | ALT | LCTRL | SPACE |   |PWRF| RSE|PWRF|
                         bindings = <
    &none &kp TAB   &kp Q  &kp W        &kp E     &kp R       &kp Y          &kp U               &kp I          &kp O        &kp P          &none
-   &none &kp LCTRL &kp A  &kp S        &kp D     &kp F       &kp H          &kp J               &kp K          &kp L        &hm RSHFT SEMI &none
-   &none &kp LSHFT &kp Z  &kp X        &kp C     &kp V       &kp N          &kp M               &hm RALT COMMA &hm RGUI DOT &hm RCTRL FSLH &none
-                          &kp LEFT_ALT &kp LCTRL &kp SPACE   &mt LCTRL BSPC &lt RAISE_WIN ENTER &mt LALT DEL
+   &none &kp LSHFT &kp A  &kp S        &kp D     &kp F       &kp H          &kp J               &kp K          &kp L        &hm RSHFT SEMI &none
+   &none &kp LCTRL &kp Z  &kp X        &kp C     &kp ESC     &kp N          &kp M               &hm RALT COMMA &hm RGUI DOT &hm RCTRL FSLH &none
+                          &kp LEFT_ALT &kp LCTRL &kp SPACE   &mt LCTRL BSPC &to DEFAULT_WIN     &mt LALT DEL
                         >;
                 };
                 default_mac_layer {
