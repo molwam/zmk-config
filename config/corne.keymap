@@ -69,7 +69,7 @@
                 combo_excl { timeout-ms = <50>; key-positions = <33 34>; bindings = <&kp EXCL>; layers = <LOWER_WIN LOWER_MAC>; }; // !
                 combo_euro { timeout-ms = <50>; key-positions = <21 22>; bindings = <&kp RA(N5)>; layers = <RAISE_WIN>; }; // €
                 combo_euro_m { timeout-ms = <50>; key-positions = <21 22>; bindings = <&kp LS(LA(N2))>; layers = <RAISE_MAC>; }; // €
-                combo_at { timeout-ms = <50>; key-positions = <8 8>; bindings = <&kp AT>; layers = <RAISE_WIN RAISE_MAC>; }; // at
+                combo_at { timeout-ms = <50>; key-positions = <8 9>; bindings = <&kp AT>; layers = <RAISE_WIN RAISE_MAC>; }; // at
                 combo_ss { timeout-ms = <50>; key-positions = <7 8>; bindings = <&kp RA(S)>; layers = <RAISE_WIN>; }; // ss
                 combo_caret { timeout-ms = <50>; key-positions = <33 34>; bindings = <&kp CARET>; layers = <RAISE_WIN RAISE_MAC>; }; // ^
         };
